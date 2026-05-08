@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LootTheBox | The Vault</title>
+    <style>
+        :root {
+            --mainGoldColor: #d4af37;
+            --stoneBackground: #1a1a1a;
+            --voidBlack: #0a0a0a;
+            --mainTextColor: #d1d1d1;
+            --borderGray: #444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+
+        body { background-color: var(--voidBlack); color: var(--mainTextColor); line-height: 1.6; }
+
+        /* NAVIGATION BAR */
+        nav {
+            background: var(--stoneBackground);
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--mainGoldColor);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--mainGoldColor); text-transform: uppercase; }
+        .navLinks a { color: var(--mainTextColor); text-decoration: none; margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; font-weight: bold; cursor: pointer; }
+        .navLinks a:hover { color: var(--mainGoldColor); }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 2px solid var(--mainGoldColor);
+        }
+
+        header h1 { color: var(--mainGoldColor); font-size: 3rem; text-shadow: 2px 2px 5px black; }
+
+        .mainContainer { display: flex; max-width: 1100px; margin: 30px auto; padding: 0 20px; gap: 20px; }
+        main { flex: 3; }
+
+        /* SIDEBAR AREA */
+        aside {
+            flex: 1;
+            background: var(--stoneBackground);
+            padding: 20px;
+            border: 2px solid var(--mainGoldColor);
+            height: fit-content;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+            text-align: center;
+        }
+
+        .sidebarCard h3 { border-bottom: 1px solid var(--mainGoldColor); margin-bottom: 15px; padding-bottom: 5px; }
+
+        .profilePicture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--mainGoldColor);
+            margin-bottom: 15px;
+            object-fit: cover;
+            filter: sepia(0.4);
+        }
+
+        .sidebarSkills { font-size: 0.8rem; text-align: left; margin-top: 10px; color: var(--mainGoldColor); }
+
+        /* BOX SECTIONS */
+        section { background: var(--stoneBackground); padding: 25px; margin-bottom: 25px; border: 1px solid var(--borderGray); border-left: 5px solid var(--mainGoldColor); }
+        h2, h3 { color: var(--mainGoldColor); margin-bottom: 15px; text-transform: uppercase; }
+
+        .memberSelect { background: var(--voidBlack); color: var(--mainGoldColor); padding: 10px; border: 1px solid var(--mainGoldColor); width: 100%; cursor: pointer; }
+
+        /* SKILLS PROGRESS BARS */
+        .skillGroup { margin-bottom: 15px; }
+        .skillLabel { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 5px; }
+        .skillContainer { background: #000; border: 1px solid var(--borderGray); height: 12px; }
+        .skillFill { background: var(--mainGoldColor); height: 100%; width: 0%; transition: width 1s ease-in-out; }
+
+        footer { text-align: center; padding: 40px; background: var(--stoneBackground); border-top: 2px solid var(--mainGoldColor); margin-top: 40px; }
+
+        .pageArea { display: none; }
+        
+        .guildList li { cursor: pointer; padding: 5px; list-style: '◈ '; margin-left: 20px; }
+        .guildList li:hover { color: var(--mainGoldColor); background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LootTheBox</div>
+        <div class="navLinks">
+            <a onclick="openPage('homePage')">Home</a>
+            <a onclick="openPage('profilePage')">Profiles</a>
+            <a onclick="openPage('blogPage')">Blog</a>
+            <a onclick="openPage('contactPage')">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1 id="mainTitle">The Guild Hall</h1>
+        <p id="mainTagline">Entering the dungeon... Prepare your gear.</p>
+    </header>
+
+    <div class="mainContainer">
+        <main>
+            <!-- HOME PAGE -->
+            <div id="homePage" class="pageArea" style="display: block;">
+                <section>
+                    <h2>About the Guild</h2>
+                    <p>LootTheBox is a retail and entertainment corporation that sells mystery boxes blending physical collectibles, such as scannable keychains and pins, with digital in-game rewards. Owned by shareholders and overseen by a board of directors, the company utilizes a structured leadership team to ensure strategic planning and responsible decision-making. This corporate framework promotes operational efficiency and scalability, allowing the business to raise capital and maintain long-term continuity beyond individual ownership.</p>
+                    <br>
+                    <h3>Guild Members</h3>
+                    <ul class="guildList">
+                        <li onclick="selectMemberAndShow('gio')">Giosef Yatar (CEO)</li>
+                        <li onclick="selectMemberAndShow('justine')">Justine Lloyd De Castro (COO)</li>
+                        <li onclick="selectMemberAndShow('daniel')">Daniel Angelo Delgado (Operations Manager)</li>
+                        <li onclick="selectMemberAndShow('eugene')">Eugene Escobar (CFO)</li>
+                        <li onclick="selectMemberAndShow('rhianne')">Rhianne Cate Capistrano (Marketing Manager)</li>
+                        <li onclick="selectMemberAndShow('therese')">Therese Madelaine Hermano (Sales)</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- PROFILE PAGE -->
+            <div id="profilePage" class="pageArea">
+                <section>
+                    <h3>Select Guild Member:</h3>
+                    <select class="memberSelect" onchange="changeMemberData(this.value)" id="memberDropdown">
+                        <option value="gio">Giosef Yatar</option>
+                        <option value="justine">Justine Lloyd De Castro</option>
+                        <option value="daniel">Daniel Angelo Delgado</option>
+                        <option value="eugene">Eugene Escobar</option>
+                        <option value="rhianne">Rhianne Cate Capistrano</option>
+                        <option value="therese">Therese Madelaine Hermano</option>
+                    </select>
+                </section>
+
+                <section>
+                    <h2 id="memberNameText">Giosef Yatar</h2>
+                    <p><i id="memberTaglineText">Lead Developer & CEO</i></p>
+                </section>
+
+                <section>
+                    <h3>Hard Skills</h3>
+                    <div id="skillsDisplayArea"></div>
+                </section>
+
+                <section>
+                    <h3>Professional Summary</h3>
+                    <p id="memberSummaryText">ICT student focused on programming logic, cybersecurity, and game development.</p>
+                </section>
+
+                <section>
+                    <h3>Contact Information</h3>
+                    <p><b>Location:</b> <span id="memberLocationText">SJDM, Bulacan</span></p>
+                    <p><b>Email:</b> <span id="memberEmailText">LootTheBox03@gmail.com</span></p>
+                </section>
+            </div>
+
+            <div id="blogPage" class="pageArea"><section><h2>Library of Scrolls</h2><p>The archives are currently being sorted...</p></section></div>
+            <!-- CONTACT PAGE -->
+            <div id="contactPage" class="pageArea">
+                <section>
+                    <h2>Secure Connection</h2>
+                    <p>Establish a direct link with the LootTheBox HQ for inquiries, business proposals, or support.</p>
+                    <br>
+                    <div style="border-top: 1px solid var(--borderGray); padding-top: 20px;">
+                        <p><b>Registry Email:</b> LootTheBox03@gmail.com</p>
+                        <p><b>Direct Line:</b> +63 XXX XXX XXXX</p> 
+                        <p><b>Business Hours:</b> 08:00 - 17:00 (PHT)</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <aside id="dynamicSidebar">
+            <div id="sidebarContent"></div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 LootTheBox. All Secrets Reserved.</p>
+    </footer>
+
+    <script>
+        var currentMemberId = 'gio';
+
+        function openPage(pageId) {
+            var pages = document.getElementsByClassName('pageArea');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none';
+            }
+            document.getElementById(pageId).style.display = 'block';
+            updateSidebar(pageId);
+        }
+
+        function updateSidebar(pageId) {
+            var sidebar = document.getElementById('sidebarContent');
+                
+            if (pageId === 'homePage') {
+                sidebar.innerHTML = `
+                    <div class="sidebarCard">
+                        <h3>Guild Stats</h3>
+                        <p><b>Status:</b> Active</p>
+                        <p><b>Members:</b> 6 Active</p>
+                        <p><b>Location:</b> Bulacan Vault</p>
+                        <br>
+                        <p><i>"Mystery Is Where the Fun At"</i></p>
+                    </div>`;
+            } else if (pageId === 'blogPage') {
+                sidebar.innerHTML = `
+                    <div class="sidebarCard">
+                        <h3>Latest Logs</h3>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Project "Vault" Launch</p>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Pixel Art Color Palettes</p>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ SQL Logic Updates</p>
+                        <hr style="margin:10px 0; border:0; border-top:1px solid #444;">
+                        <p><i>Check back for more records soon.</i></p>
+                    </div>`;
+            } else if (pageId === 'contactPage') {
+                sidebar.innerHTML = `
+                    <div class="sidebarCard">
+                        <h3>Official HQ</h3>
+                        <p><b>Registry:</b> SJDM, Bulacan</p>
+                        <p><b>Status:</b> Open for Inquiries</p>
+                        <br>
+                        <div style="background: var(--voidBlack); padding: 10px; border: 1px dashed var(--mainGoldColor);">
+                            <p style="font-size: 0.75rem;">Expect a response within 24-48 Business Hours.</p>
+                        </div>
+                    </div>`;
+            } else {
+                // This handles the Profile Page (showing member info)
+                var role, img, skillsList;
+                
+                if (currentMemberId === 'gio') {
+                    role = "CEO / Lead Dev";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=GIO";
+                    skillsList = "MS Office, Web Dev, Java";
+                } else if (currentMemberId === 'justine') {
+                    role = "COO / Operations";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=JUSTINE";
+                    skillsList = "PC Hardware, MS Office, Web Dev";
+                } else if (currentMemberId === 'daniel') {
+                    role = "Operations Manager";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=DANIEL";
+                    skillsList = "MS Office, Web Dev";
+                } else if (currentMemberId === 'eugene') {
+                    role = "CFO / Finance";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=EUGENE";
+                    skillsList = "PC Hardware, MS Office, Web Dev";
+                } else if (currentMemberId === 'rhianne') {
+                    role = "Marketing Manager";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=RHIANNE";
+                    skillsList = "MS Office, Web Dev";
+                } else {
+                    role = "Customer Service";
+                    img = "https://via.placeholder.com/150/1a1a1a/d4af37?text=THERESE";
+                    skillsList = "MS Office, Web Dev";
+                }
+            
+                sidebar.innerHTML = `
+                    <div class="sidebarCard">
+                        <img src="${img}" class="profilePicture" alt="Avatar">
+                        <h3>${role}</h3>
+                        <p><b>Class:</b> ICT (SHS)</p>
+                        <div class="sidebarSkills"><b>Top Skills:</b><br>${skillsList}</div>
+                        <hr style="margin:10px 0; border:0; border-top:1px solid #444;">
+                        <p><b>LootTheBox</b> Member</p>
+                    </div>`;
+            }
+        }
+
+        function changeMemberData(id) {
+            currentMemberId = id;
+            var name, tagline, summary, loc, email, skillsObj;
+
+            if (id === 'gio') {
+                name = "Giosef Yatar"; tagline = "Lead Developer & CEO"; summary = "The company leader who sets the long-term goals and builds the technical foundations for our projects. He focuses on strategic planning and making sure our systems are built with solid logic."; loc = "SJDM, Bulacan"; email = "gioyatar716@gmail.com";
+                skillsObj = { "MS Office": "65%", "Web Dev": "55%", "Java": "40%", "C#": "35%", "SQL": "25%" };
+            } else if (id === 'justine') {
+                name = "Justine Lloyd De Castro"; tagline = "Operations Specialist & COO"; summary = "Responsible for managing the company’s physical tools and technical equipment. He ensures all hardware is maintained and that daily operations run smoothly without interruptions."; loc = "SJDM, Bulacan"; email = "jdcastro5312007@gmail.com";
+                skillsObj = { "PC Hardware": "85%", "MS Office": "70%", "Web Dev": "55%", "Java": "40%", "C#": "35%", "SQL": "25%" };
+            } else if (id === 'daniel') {
+                name = "Daniel Angelo Delgado"; tagline = "Guild Operations Manager"; summary = "The coordinator in charge of the company’s daily workflow and data management. He focuses on organizing resources and improving efficiency so that nothing goes to waste."; loc = "SJDM, Bulacan"; email = "delgadodanielangelo02@gmail.com";
+                skillsObj = { "MS Office": "65%", "Web Dev": "25%" };
+            } else if (id === 'eugene') {
+                name = "Eugene Escobar"; tagline = "Financial Strategist & CFO"; summary = "The financial strategist who manages the company’s budget and accounts. He tracks all expenses and savings to ensure the business stays profitable and financially healthy."; loc = "SJDM, Bulacan"; email = "eugeneescobar31@gmail.com";
+                skillsObj = { "PC Hardware": "75%", "MS Office": "70%", "Web Dev": "60%", "Java": "40%", "C#": "35%", "SQL": "25%" };
+            } else if (id === 'rhianne') {
+                name = "Rhianne Cate Capistrano"; tagline = "Lead Marketing Manager"; summary = "Handles the company's social media and public identity. She focuses on creating a professional brand image and finding new ways to reach and connect with customers."; loc = "SJDM, Bulacan"; email = "catecapistrano378@gmail.com";
+                skillsObj = { "MS Office": "80%", "Web Dev": "30%" };
+            } else if (id === 'therese') {
+                name = "Therese Madelaine Hermano"; tagline = "Sales & Customer Support"; summary = "Focuses on communicating with clients and managing sales. She ensures customers are happy with our products and helps the company grow by building strong professional relationships."; loc = "SJDM, Bulacan"; email = "hermanotherese@gmail.com";
+                skillsObj = { "MS Office": "80%", "Web Dev": "15%" };
+            }
+            
+            document.getElementById('memberNameText').innerText = name;
+            document.getElementById('memberTaglineText').innerText = tagline;
+            document.getElementById('memberSummaryText').innerText = summary;
+            document.getElementById('memberLocationText').innerText = loc;
+            document.getElementById('memberEmailText').innerText = email;
+            
+            var skillsContainer = document.getElementById('skillsDisplayArea');
+            skillsContainer.innerHTML = ''; 
+            
+            // Traditional loop for skills
+            for (var skillName in skillsObj) {
+                var percentValue = skillsObj[skillName];
+                skillsContainer.innerHTML += `
+                    <div class="skillGroup">
+                        <div class="skillLabel"><span>${skillName}</span><span>${percentValue}</span></div>
+                        <div class="skillContainer"><div class="skillFill" style="width: ${percentValue}"></div></div>
+                    </div>`;
+            }
+            
+            document.getElementById('memberDropdown').value = id;
+            if (document.getElementById('profilePage').style.display === 'block') {
+                updateSidebar('profilePage');
+            }
+        }
+
+        function selectMemberAndShow(id) {
+            changeMemberData(id);
+            openPage('profilePage');
+        }
+
+        window.onload = function() {
+            changeMemberData('gio');
+            updateSidebar('homePage');
+        };
+    </script>
+</body>
+</html>
