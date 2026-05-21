@@ -13,9 +13,18 @@
             --borderGray: #444;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Courier New', Courier, monospace; }
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Courier New', Courier, monospace; 
+        }
 
-        body { background-color: var(--voidBlack); color: var(--mainTextColor); line-height: 1.6; }
+        body { 
+            background-color: var(--voidBlack); 
+            color: var(--mainTextColor); 
+            line-height: 1.6; 
+        }
 
         /* NAVIGATION BAR */
         nav {
@@ -30,9 +39,26 @@
             z-index: 100;
         }
 
-        .logo { font-size: 1.5rem; font-weight: bold; color: var(--mainGoldColor); text-transform: uppercase; }
-        .navLinks a { color: var(--mainTextColor); text-decoration: none; margin-left: 20px; font-size: 0.9rem; text-transform: uppercase; font-weight: bold; cursor: pointer; }
-        .navLinks a:hover { color: var(--mainGoldColor); }
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: bold; 
+            color: var(--mainGoldColor); 
+            text-transform: uppercase; 
+        }
+
+        .navLinks a { 
+            color: var(--mainTextColor); 
+            text-decoration: none; 
+            margin-left: 20px; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+            cursor: pointer; 
+        }
+
+        .navLinks a:hover { 
+            color: var(--mainGoldColor); 
+        }
 
         /* HEADER SECTION */
         header {
@@ -45,10 +71,23 @@
             border-bottom: 2px solid var(--mainGoldColor);
         }
 
-        header h1 { color: var(--mainGoldColor); font-size: 3rem; text-shadow: 2px 2px 5px black; }
+        header h1 { 
+            color: var(--mainGoldColor); 
+            font-size: 3rem; 
+            text-shadow: 2px 2px 5px black; 
+        }
 
-        .mainContainer { display: flex; max-width: 1100px; margin: 30px auto; padding: 0 20px; gap: 20px; }
-        main { flex: 3; }
+        .mainContainer { 
+            display: flex; 
+            max-width: 1100px; 
+            margin: 30px auto; 
+            padding: 0 20px; 
+            gap: 20px; 
+        }
+
+        main { 
+            flex: 3; 
+        }
 
         /* SIDEBAR AREA */
         aside {
@@ -61,7 +100,11 @@
             text-align: center;
         }
 
-        .sidebarCard h3 { border-bottom: 1px solid var(--mainGoldColor); margin-bottom: 15px; padding-bottom: 5px; }
+        .sidebarCard h3 { 
+            border-bottom: 1px solid var(--mainGoldColor); 
+            margin-bottom: 15px; 
+            padding-bottom: 5px; 
+        }
 
         .profilePicture {
             width: 120px;
@@ -73,29 +116,95 @@
             filter: sepia(0.4);
         }
 
-        .sidebarSkills { font-size: 0.8rem; text-align: left; margin-top: 10px; color: var(--mainGoldColor); }
+        .sidebarSkills { 
+            font-size: 0.8rem; 
+            text-align: left; 
+            margin-top: 10px; 
+            color: var(--mainGoldColor); 
+        }
 
         /* BOX SECTIONS */
-        section { background: var(--stoneBackground); padding: 25px; margin-bottom: 25px; border: 1px solid var(--borderGray); border-left: 5px solid var(--mainGoldColor); }
-        h2, h3 { color: var(--mainGoldColor); margin-bottom: 15px; text-transform: uppercase; }
+        section { 
+            background: var(--stoneBackground); 
+            padding: 25px; 
+            margin-bottom: 25px; 
+            border: 1px solid var(--borderGray); 
+            border-left: 5px solid var(--mainGoldColor); 
+        }
 
-        .memberSelect { background: var(--voidBlack); color: var(--mainGoldColor); padding: 10px; border: 1px solid var(--mainGoldColor); width: 100%; cursor: pointer; }
+        h2, h3 { 
+            color: var(--mainGoldColor); 
+            margin-bottom: 15px; 
+            text-transform: uppercase; 
+        }
+
+        .memberSelect { 
+            background: var(--voidBlack); 
+            color: var(--mainGoldColor); 
+            padding: 10px; 
+            border: 1px solid var(--mainGoldColor); 
+            width: 100%; 
+            cursor: pointer; 
+        }
 
         /* SKILLS PROGRESS BARS */
-        .skillGroup { margin-bottom: 15px; }
-        .skillLabel { display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 5px; }
-        .skillContainer { background: #000; border: 1px solid var(--borderGray); height: 12px; }
-        .skillFill { background: var(--mainGoldColor); height: 100%; width: 0%; transition: width 1s ease-in-out; }
+        .skillGroup { 
+            margin-bottom: 15px; 
+        }
 
-        footer { text-align: center; padding: 40px; background: var(--stoneBackground); border-top: 2px solid var(--mainGoldColor); margin-top: 40px; }
+        .skillLabel { 
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 0.9rem; 
+            margin-bottom: 5px; 
+        }
 
-        .pageArea { display: none; }
+        .skillContainer { 
+            background: #000; 
+            border: 1px solid var(--borderGray); 
+            height: 12px; 
+        }
+
+        .skillFill { 
+            background: var(--mainGoldColor); 
+            height: 100%; 
+            width: 0%; 
+            transition: width 1s ease-in-out; 
+        }
+
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            background: var(--stoneBackground); 
+            border-top: 2px solid var(--mainGoldColor); 
+            margin-top: 40px; 
+        }
+
+        .pageArea { 
+            display: none; 
+        }
         
-        .guildList li { cursor: pointer; padding: 5px; list-style: '◈ '; margin-left: 20px; }
-        .guildList li:hover { color: var(--mainGoldColor); background: rgba(255,255,255,0.05); }
+        .guildList li { 
+            cursor: pointer; 
+            padding: 5px; 
+            list-style: '◈ '; 
+            margin-left: 20px; 
+        }
 
-        .expItem { margin-top: 15px; padding: 10px; border: 1px dashed var(--borderGray); }
-        .expItem b { color: var(--mainGoldColor); }
+        .guildList li:hover { 
+            color: var(--mainGoldColor); 
+            background: rgba(255,255,255,0.05); 
+        }
+
+        .expItem { 
+            margin-top: 15px; 
+            padding: 10px; 
+            border: 1px dashed var(--borderGray); 
+        }
+
+        .expItem b { 
+            color: var(--mainGoldColor); 
+        }
     </style>
 </head>
 <body>
@@ -186,10 +295,62 @@
             <div id="blogPage" class="pageArea">
                 <section>
                     <h2>Library of Scrolls</h2>
-                    <p>The archives are currently being sorted...</p>
-                    <div style="margin-top:20px; border-top:1px solid var(--borderGray); padding-top:15px;">
-                        <p><b>Latest Entry:</b> Establishing the LootTheBox Core Systems</p>
-                        <p><small>Posted by: Giosef Yatar</small></p>
+                    <p>Records, development logs, and guild discoveries from the LootTheBox archives.</p>
+                
+                    <div style="margin-top:25px; border-top:1px solid var(--borderGray); padding-top:20px;">
+                        <h3>1. The Formation of LootTheBox</h3>
+                        <p><small>Posted by: Giosef Yatar | February 6, 2026</small></p>
+                        <p>
+                            LootTheBox originally started as a game development group formed to create interactive digital experiences. During the early planning stage, the team focused on organizing responsibilities, discussing game concepts, and building a structured development workflow. Each member was assigned a role based on their strengths, including programming, operations, design, finance, and marketing. As development continued, the team later expanded the company’s vision by introducing physical mystery box products connected to digital rewards and collectibles.
+                        </p>
+                    </div>
+                
+                    <div style="margin-top:25px; border-top:1px solid var(--borderGray); padding-top:20px;">
+                        <h3>2. Game Planning, Story Development, and First Systems</h3>
+                        <p><small>Posted by: Justine Lloyd De Castro | March 11, 2026</small></p>
+                        <p>
+                            After establishing LootTheBox as a game development company, the team moved forward with planning its first official project: a PC Building Simulator RPG. The goal was to create a system where players progress through building and upgrading computer systems while also experiencing RPG-style mechanics such as quests, resource management, and progression-based rewards. <br><br>
+                            The planning phase focused on defining the core gameplay loop—acquiring parts, assembling PCs, optimizing builds, and completing objectives tied to performance and efficiency. This structure was designed to blend technical simulation with RPG progression systems. <br><br>
+                            Alongside gameplay design, the team developed the early story concept. The narrative revolves around a world where technology progression is tied to building powerful systems, and players advance by completing tasks that require strategic PC assembly and upgrades. <br><br>
+                            Initial system development began shortly after planning. This included early frameworks for inventory management, part categorization, stat-based components, and basic upgrade mechanics. These systems served as the foundation for how players interact with hardware and progression within the game. <br><br>
+                            This stage marked the transition from conceptual planning into structured game development for a PC Building Simulator RPG.
+                        </p>
+                    </div>
+                
+                    <div style="margin-top:25px; border-top:1px solid var(--borderGray); padding-top:20px;">
+                        <h3>3. Business Planning and Company Strategy Development</h3>
+                        <p><small>Posted by: Rhianne Cate Capistrano | March 23, 2026</small></p>
+                        <p>
+                            Following the establishment of the PC Building Simulator RPG project, LootTheBox transitioned into defining its business structure and long-term strategy. The focus shifted from purely development work to planning how the company would operate, grow, and sustain its projects. <br><br>
+                            The business plan outlined the company’s core objectives, including developing interactive games, integrating physical and digital reward systems, and building a scalable model for future products. This phase also involved identifying target audiences, potential revenue streams, and the overall direction of the brand. <br><br>
+                            A key part of the planning process was defining operational roles within the organization. Responsibilities were organized across development, operations, finance, marketing, and support to ensure efficient workflow and accountability within the team. <br><br>
+                            In addition, the company began structuring its long-term vision, which includes expanding beyond game development into a hybrid entertainment system combining gameplay experiences with collectible-based rewards. <br><br>
+                            This stage marked the formal transition of LootTheBox from a development-focused team into a structured game company with a defined business strategy.
+                        </p>
+                    </div>
+                
+                    <div style="margin-top:25px; border-top:1px solid var(--borderGray); padding-top:20px;">
+                        <h3>4. Game Development: Building the PC Building Simulator RPG</h3>
+                        <p><small>Posted by: Justine Lloyd De Castro | May 4, 2026</small></p>
+                        <p>
+                            After finalizing the business strategy, LootTheBox moved into full game development for its PC Building Simulator RPG. This phase focused on turning planned systems and concepts into an actual playable experience. <br><br>
+                            The development process began with building the core gameplay loop, where players acquire computer parts, assemble systems, and evaluate performance based on in-game objectives. Each component was designed with specific stats and attributes to simulate realistic PC building mechanics while still supporting RPG-style progression. <br><br>
+                            The team also implemented the early version of the inventory system, allowing players to store, manage, and select hardware components. This system became essential for structuring gameplay flow and ensuring that upgrades and item management were intuitive and functional. <br><br>
+                            Parallel to system development, the game’s interface began taking shape. Early UI elements were created to support navigation, part selection, and system feedback during PC assembly. These elements were continuously adjusted to improve clarity and usability. <br><br>
+                            This stage represents the shift from planning and documentation into active construction of the PC Building Simulator RPG, where core mechanics began forming into a playable structure.
+                        </p>
+                    </div>
+                
+                    <div style="margin-top:25px; border-top:1px solid var(--borderGray); padding-top:20px;">
+                        <h3>5. After Hours: Final Game Identity and Alpha Phase</h3>
+                        <p><small>Posted by: Giosef Yatar | May 20, 2026</small></p>
+                        <p>
+                            As development progressed, the project officially adopted its final identity under the name After Hours. The title reflects the game’s theme of late-stage progression, technical problem-solving, and building systems beyond standard limits, aligning with the PC Building Simulator RPG concept. <br><br> 
+                            With the game identity finalized, the project entered its alpha phase. This stage focused on stabilizing core mechanics and testing the overall gameplay loop in a functional environment. Systems such as PC assembly, component management, and performance evaluation were reviewed for consistency and balance. <br><br>
+                            During alpha development, the primary goal was to identify issues in gameplay flow and refine interactions between systems. Early builds were tested internally to ensure that core mechanics were working as intended before further expansion. <br><br>
+                            This phase also marked the beginning of structured iteration, where feedback from testing was used to improve stability, adjust mechanics, and prepare the game for future development stages beyond alpha. <br><br>
+                            The transition into After Hours alpha represents a major milestone in the project, where the game shifted from full development into structured testing and refinement.
+                        </p>
                     </div>
                 </section>
             </div>
@@ -241,7 +402,7 @@
                         <h3>Guild Stats</h3>
                         <p><b>Status:</b> Active</p>
                         <p><b>Members:</b> 6 Active</p>
-                        <p><b>Location:</b> Bulacan Vault</p>
+                        <p><b>Location:</b> SJDM, Bulacan </p>
                         <br>
                         <p><i>"Mystery Is Where the Fun At"</i></p>
                     </div>`;
@@ -249,9 +410,9 @@
                 sidebar.innerHTML = `
                     <div class="sidebarCard">
                         <h3>Latest Logs</h3>
-                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Project "Vault" Launch</p>
-                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Pixel Art Color Palettes</p>
-                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ SQL Logic Updates</p>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ After Hours: Final Game Identity and Alpha Phase</p>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Game Development: Building the PC Building Simulator RPG</p>
+                        <p style="font-size: 0.8rem; text-align: left; margin-bottom: 10px;">◈ Business Planning and Company Strategy Development</p>
                         <hr style="margin:10px 0; border:0; border-top:1px solid #444;">
                         <p><i>Check back for more records soon.</i></p>
                     </div>`;
@@ -268,18 +429,37 @@
                     </div>`;
             } else {
                 var role, img, skillsList;
-                if (currentMemberId === 'gio') { role = "CEO / Lead Dev"; img = "img/gio.png"; skillsList = "MS Office, Web Dev, Java"; }
-                else if (currentMemberId === 'justine') { role = "COO / Operations"; img = "img/justine.png"; skillsList = "PC Hardware, MS Office, Web Dev"; }
-                else if (currentMemberId === 'daniel') { role = "Operations Manager"; img = "img/danyel.png"; skillsList = "MS Office, Web Dev"; }
-                else if (currentMemberId === 'eugene') { role = "CFO / Finance"; img = "img/eugene.jpg"; skillsList = "PC Hardware, MS Office, Web Dev"; }
-                else if (currentMemberId === 'rhianne') { role = "Marketing Manager"; img = "img/rhianne.jpg"; skillsList = "MS Office, Web Dev, Pixel Art"; }
-                else { role = "Customer Service"; img = "img/therese.jpg"; skillsList = "MS Office, Web Dev"; }
+                if (currentMemberId === 'gio') { 
+                    role = "CEO / Lead Dev"; 
+                    img = "img/gio.png"; 
+                    skillsList = "MS Office, Web Dev, Java"; 
+                } else if (currentMemberId === 'justine') { 
+                    role = "COO / Operations"; 
+                    img = "img/justine.png"; 
+                    skillsList = "PC Hardware, MS Office, Web Dev"; 
+                } else if (currentMemberId === 'daniel') { 
+                    role = "Operations Manager"; 
+                    img = "img/danyel.png"; 
+                    skillsList = "MS Office, Web Dev"; 
+                } else if (currentMemberId === 'eugene') { 
+                    role = "CFO / Finance"; 
+                    img = "img/eugene.jpg"; 
+                    skillsList = "PC Hardware, MS Office, Web Dev"; 
+                } else if (currentMemberId === 'rhianne') { 
+                    role = "Marketing Manager"; 
+                    img = "img/rhianne.jpg"; 
+                    skillsList = "MS Office, Web Dev, Pixel Art"; 
+                } else { 
+                    role = "Customer Service"; 
+                    img = "img/therese.jpg"; 
+                    skillsList = "MS Office, Web Dev"; 
+                }
             
                 sidebar.innerHTML = `
                     <div class="sidebarCard">
                         <img src="${img}" class="profilePicture" alt="Avatar">
                         <h3>${role}</h3>
-                        <p><b>Class:</b> ICT (SHS)</p>
+                        <p><b>Class:</b> ICT - MAWD (SHS)</p>
                         <div class="sidebarSkills"><b>Top Skills:</b><br>${skillsList}</div>
                         <hr style="margin:10px 0; border:0; border-top:1px solid #444;">
                         <p><b>LootTheBox</b> Member</p>
@@ -292,29 +472,134 @@
             var name, tagline, summary, loc, email, religion, edu, exp, skillsObj;
 
             if (id === 'gio') {
-                name = "Giosef Yatar"; tagline = "Lead Developer & CEO"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "The company leader who sets the long-term goals and builds the technical foundations for our projects. He focuses on strategic planning and making sure our systems are built with solid logic."; loc = "SJDM, Bulacan"; email = "gioyatar716@gmail.com";
-                exp = { role: "Project Lead", tools: "Aseprite, Canva, GitHub, Trello, Unity, Visual Studio", desc: "One of the game developers and also made art assets, promotional poster and banner. Also made this website." };
-                skillsObj = { "MS Office": "65%", "Web Dev": "55%", "Java": "40%", "C#": "35%", "Graphic Design": "25%", "SQL": "25%", "Pixel Art": "15%" };
+                name = "Giosef Yatar"; 
+                tagline = "Lead Developer & CEO"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "The company leader who sets the long-term goals and builds the technical foundations for our projects. He focuses on strategic planning and making sure our systems are built with solid logic."; 
+                loc = "SJDM, Bulacan"; 
+                email = "gioyatar716@gmail.com";
+
+                exp = { 
+                    role: "Project Lead", 
+                    tools: "Aseprite, Canva, GitHub, Trello, Unity, Visual Studio", 
+                    desc: "One of the game developers and also made art assets, promotional poster and banner. Also made this website." 
+                };
+
+                skillsObj = { 
+                    "MS Office": "65%", 
+                    "Web Dev": "55%", 
+                    "Java": "40%", 
+                    "C#": "35%", 
+                    "Graphic Design": "25%", 
+                    "SQL": "25%", 
+                    "Pixel Art": "15%" 
+                };
+
             } else if (id === 'justine') {
-                name = "Justine Lloyd De Castro"; tagline = "COO & Operations Specialist"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "Responsible for managing the company’s physical tools and technical equipment. He ensures all hardware is maintained and that daily operations run smoothly without interruptions."; loc = "SJDM, Bulacan"; email = "jdcastro5312007@gmail.com";
-                exp = { role: "Main Game Developer, Hardware Lead", tools: "GitHub, PC Assembly, Troubleshooting, Unity, Visual Studio", desc: "Main developer of the game and maintained the guild's technical infrastructure." };
-                skillsObj = { "PC Hardware": "85%", "MS Office": "70%", "Web Dev": "55%", "Java": "40%", "C#": "35%", "SQL": "25%" };
+                name = "Justine Lloyd De Castro"; 
+                tagline = "COO & Operations Specialist"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "Responsible for managing the company’s physical tools and technical equipment. He ensures all hardware is maintained and that daily operations run smoothly without interruptions."; 
+                loc = "SJDM, Bulacan"; 
+                email = "jdcastro5312007@gmail.com";
+                
+                exp = { 
+                    role: "Main Game Developer, Hardware Lead", 
+                    tools: "GitHub, PC Assembly, Troubleshooting, Unity, Visual Studio", 
+                    desc: "Main developer of the game and maintained the guild's technical infrastructure." 
+                };
+
+                skillsObj = { 
+                    "PC Hardware": "85%", 
+                    "MS Office": "70%", 
+                    "Web Dev": "55%", 
+                    "Java": "40%", 
+                    "C#": "35%", 
+                    "SQL": "25%" 
+                };
+
             } else if (id === 'daniel') {
-                name = "Daniel Angelo Delgado"; tagline = "Operations Manager"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "The coordinator in charge of the company’s daily workflow and data management. He focuses on organizing resources and improving efficiency so that nothing goes to waste."; loc = "SJDM, Bulacan"; email = "delgadodanielangelo02@gmail.com";
-                exp = { role: "Resource Manager", tools: "MS Excel, Trello", desc: "Optimized logistics for mystery box shipments." };
-                skillsObj = { "MS Office": "65%", "Web Dev": "25%" };
+                name = "Daniel Angelo Delgado"; 
+                tagline = "Operations Manager"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "The coordinator in charge of the company’s daily workflow and data management. He focuses on organizing resources and improving efficiency so that nothing goes to waste."; 
+                loc = "SJDM, Bulacan"; 
+                email = "delgadodanielangelo02@gmail.com";
+                
+                exp = { 
+                    role: "Resource Manager", 
+                    tools: "MS Excel, Trello", desc: "Optimized logistics for mystery box shipments." 
+                };
+
+                skillsObj = { 
+                    "MS Office": "65%", 
+                    "Web Dev": "25%" 
+                };
             } else if (id === 'eugene') {
-                name = "Eugene Escobar"; tagline = "CFO & Financial Strategist"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "The financial strategist who manages the company’s budget and accounts. He tracks all expenses and savings to ensure the business stays profitable and financially healthy."; loc = "SJDM, Bulacan"; email = "eugeneescobar31@gmail.com";
-                exp = { role: "Game Developer, Financial Strategist", tools: "GitHub, Spreadsheets, Unity, Visual Studio", desc: "One of the Game Developers for our game and manages capital raising for the mystery box launch." };
-                skillsObj = { "PC Hardware": "75%", "MS Office": "70%", "Web Dev": "60%", "Java": "40%", "C#": "35%", "SQL": "25%" };
+                name = "Eugene Escobar"; 
+                tagline = "CFO & Financial Strategist"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "The financial strategist who manages the company’s budget and accounts. He tracks all expenses and savings to ensure the business stays profitable and financially healthy."; 
+                loc = "SJDM, Bulacan"; 
+                email = "eugeneescobar31@gmail.com";
+                
+                exp = { 
+                    role: "Game Developer, Financial Strategist", 
+                    tools: "GitHub, Spreadsheets, Unity, Visual Studio", 
+                    desc: "One of the Game Developers for our game and manages capital raising for the mystery box launch." 
+                };
+
+                skillsObj = { 
+                    "PC Hardware": "75%", 
+                    "MS Office": "70%", 
+                    "Web Dev": "60%", 
+                    "Java": "40%", 
+                    "C#": "35%", 
+                    "SQL": "25%" 
+                };
             } else if (id === 'rhianne') {
-                name = "Rhianne Cate Capistrano"; tagline = "Lead Marketing Manager"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "Handles the company's social media and public identity. She focuses on creating a professional brand image and finding new ways to reach and connect with customers."; loc = "SJDM, Bulacan"; email = "catecapistrano378@gmail.com";
-                exp = { role: "Brand Specialist", tools: "Aseprite, Canva, MS Office, Social Media", desc: "Designed the public identity for LootTheBox, made most of the game's UI. Also designed few of the game's bosses." };
-                skillsObj = { "MS Office": "80%", "Web Dev": "30%", "Pixel Art": "15%" };
+                name = "Rhianne Cate Capistrano"; 
+                tagline = "Lead Marketing Manager"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "Handles the company's social media and public identity. She focuses on creating a professional brand image and finding new ways to reach and connect with customers."; 
+                loc = "SJDM, Bulacan"; 
+                email = "catecapistrano378@gmail.com";
+                
+                exp = { 
+                    role: "Brand Specialist", 
+                    tools: "Aseprite, Canva, MS Office, Social Media", 
+                    desc: "Designed the public identity for LootTheBox, made most of the game's UI. Also designed few of the game's bosses." 
+                };
+
+                skillsObj = { 
+                    "MS Office": "80%", 
+                    "Web Dev": "30%", 
+                    "Pixel Art": "15%" 
+                };
             } else if (id === 'therese') {
-                name = "Therese Madelaine Hermano"; tagline = "Sales & Customer Support"; religion = "Roman Catholic"; edu = "STI College - SJDM"; summary = "Focuses on communicating with clients and managing sales. She ensures customers are happy with our products and helps the company grow by building strong professional relationships."; loc = "SJDM, Bulacan"; email = "hermanotherese@gmail.com";
-                exp = { role: "Sales Lead", tools: "CRM, Communication", desc: "Handled customer inquiries during the beta launch." };
-                skillsObj = { "MS Office": "80%", "Web Dev": "15%" };
+                name = "Therese Madelaine Hermano"; 
+                tagline = "Sales & Customer Support"; 
+                religion = "Roman Catholic"; 
+                edu = "STI College - SJDM"; 
+                summary = "Focuses on communicating with clients and managing sales. She ensures customers are happy with our products and helps the company grow by building strong professional relationships."; 
+                loc = "SJDM, Bulacan"; 
+                email = "hermanotherese@gmail.com";
+                
+                exp = { 
+                    role: "Sales Lead", 
+                    tools: "CRM, Communication", 
+                    desc: "Handled customer inquiries during the beta launch." 
+                };
+                
+                skillsObj = { 
+                    "MS Office": "80%", 
+                    "Web Dev": "15%" 
+                };
             }
             
             document.getElementById('memberNameText').innerText = name;
@@ -339,9 +624,15 @@
             if (document.getElementById('profilePage').style.display === 'block') updateSidebar('profilePage');
         }
 
-        function selectMemberAndShow(id) { changeMemberData(id); openPage('profilePage'); }
+        function selectMemberAndShow(id) { 
+            changeMemberData(id); 
+            openPage('profilePage'); 
+        }
 
-        window.onload = function() { changeMemberData('gio'); updateSidebar('homePage'); };
+        window.onload = function() { 
+            changeMemberData('gio'); 
+            updateSidebar('homePage'); 
+        };
     </script>
 </body>
 </html>
